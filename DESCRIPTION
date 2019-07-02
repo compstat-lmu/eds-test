@@ -1,3 +1,5 @@
 Package: basis-course-test
 Imports:
+    here,
+    dplyr,
     xaringan

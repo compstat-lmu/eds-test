@@ -1,0 +1,60 @@
+# Factors
+
+Character vectors can be easily converted to factors via `as.factor()`:
+
+```{r, size = "tiny", R.options = list(width = 100)}
+degree = c("college", "PhD", "high school", "college", "PhD")
+print(degree)
+degree = as.factor(degree)
+print(degree)
+```
+
+- Nominal and ordinal vectors should be converted to factors.
+
+- A factor is basically an integer vector, where each number has a corresponding "label". 
+
+<!-- - Often a vector is a character but only finitely many different values are  -->
+<!-- allowed. -->
+<!-- - Indexing factors is identical to vectors. -->
+
+---
+
+# Factors
+
+The levels of a factor can be changed or reordered after it is created:
+```{r, size = "tiny"}
+print(degree)
+levels(degree)[3] = "doctoral"
+print(degree)
+
+new.lvls = levels(degree)[c(2,1,3)]
+print(new.lvls)
+degree = factor(degree, levels = new.lvls)
+print(degree)
+```
+
+<!-- ## Factors  -->
+
+<!-- - In this case, an ordered factor makes sense (variables can be ordered by education level).  -->
+<!-- This can be achieved by setting the argument `ordered = TRUE` -->
+
+<!-- ```{r} -->
+<!-- degree = factor(degree, ordered = TRUE) -->
+<!-- degree[degree >= "college"] -->
+<!-- ``` -->
+
+---
+
+# Factors
+
+The factor levels can be extracted as a factor variable or as a character vector:
+
+```{r}
+unique(degree)
+levels(degree)
+```
+
+- `unique()` keeps the factor structure.
+- `levels()` returns the factor levels as a character vector.
+
+---

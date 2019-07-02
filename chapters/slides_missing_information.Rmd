@@ -1,0 +1,39 @@
+# `NA`, `NaN` and `NULL`
+
+In other situations we have to show the absence of information.
+`NA`, `NaN` and `NULL` can all be seen as a representation of "nothing", but the 
+reason for the missing information is different:
+
+`NA`:
+: Missing observation, improper conversion, ...
+
+`NaN`:
+: Numerical problem occured, `0 / 0`, `log(-1)`, etc. Often followed by a 
+  warning message.
+
+`NULL`:
+: The `NULL` object. Object with no reference value, i.e., absence of an object.
+
+---
+
+# `is.na` and `is.null`
+
+Often it is required to check if a variable is `NA` or `NULL`. But a logical 
+comparison with `NA` or `NULL` results in:
+
+```{r, size = "tiny"}
+age = NA    # assign NA to age, i.e., unknown age
+age == NA
+
+dec32 = NULL  # assign NULL to dec32
+dec32 == NULL
+```
+
+Instead of a logical comparison use the functions `is.na` and `is.null`:
+
+```{r, size = "tiny"}
+is.na(age)
+is.null(dec32)
+```
+
+---

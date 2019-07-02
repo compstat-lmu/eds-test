@@ -1,0 +1,8 @@
+div.my-header {
+    width: 150px;
+    position: absolute;
+    left: 705px;
+    bottom: 602px;
+    z-index: 900;
+}
+

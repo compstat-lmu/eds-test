@@ -1,0 +1,27 @@
+.left-code {
+  color: #777;
+  width: 38%;
+  height: 92%;
+  float: left;
+}
+.right-plot {
+  width: 60%;
+  float: right;
+  /* border-left: solid 1px #272822; */
+  padding-left: 1%;
+}
+
+.plot-callout {
+  height: 300px;
+  width: 600px;
+  bottom: 10%;
+  right: 5%;
+  position: absolute;
+  padding: 0px;
+}
+
+.plot-callout img {
+  width: 100%;
+  border: 4px solid #23373B;
+}
+

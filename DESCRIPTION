@@ -1,0 +1,3 @@
+Package: basis-course-test
+Imports:
+    xaringan

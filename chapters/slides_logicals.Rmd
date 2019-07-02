@@ -1,0 +1,59 @@
+# Logicals
+```{r, size = "tiny", include=FALSE}
+name = "Maria" # character
+
+age = 33L # integer
+
+height = 1.64 # double
+
+female = TRUE # logical
+```
+
+Logicals represent the result of a comparison:
+
+```{r, size = "tiny"}
+name == "Julia" # is the name equal to "Julia"?
+
+age > 20 # is the age larger than 20?
+
+height <= 1.64 # is the height smaller or equal to 1.64?
+
+age != 20 # is the age not equal to 20?
+```
+
+Available comparisons are smaller `<`, smaller or equal `<=`, larger `>`, larger 
+or equal `>=`, equal `==` and not equal `!=`.
+
+---
+
+# Chaining of Logicals
+
+Multiple logical comparisons can be combined with *and* `&`, *or* `|`.
+
+```{r, size = "tiny"}
+name == "Maria" & age < 20
+
+name == "Maria" & age >= 20
+
+name == "Julia" | age > 20
+```
+
+Parentheses can be used to define the order of the chaining.
+
+```{r, size = "tiny"}
+age == 20 & (height < 1.20 | name == "Julia")
+```
+
+---
+
+# Negation of Logicals
+
+Negation can be achieved using `!`
+
+```{r, size = "tiny"}
+(name == "Maria" & age > 20)
+
+!(name == "Maria" & age > 20)
+```
+
+---

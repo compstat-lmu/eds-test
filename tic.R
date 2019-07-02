@@ -12,6 +12,7 @@ get_stage("deploy") %>%
   add_step(step_setup_push_deploy(path = "docs", branch = "gh-pages")) %>%
   add_step(step_run_code(source("create-course.R"))) %>%
   add_step(step_run_code(source("basis-course.R"))) %>%
+  add_step(step_run_code(source("render-course.R"))) %>%
   add_step(step_run_code(rmarkdown::render_site("courses/basis/2019_03"))) %>%
   #add_step(step_run_code(withr::with_dir("website", rmarkdown::render_site()))) %>%
   #add_step(step_run_code(withr::with_dir("landing-page", rmarkdown::render_site()))) %>%

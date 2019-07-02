@@ -5,12 +5,12 @@ include:
 # - images
 exclude: DESCRIPTION
 navbar:
-  title: eds-test
+  title: Basis Course test
   left:
   - text: Home
     href: index.html
-  - text: test
-    href: test.html
+  - text: Introduction
+    href: basis_descriptive.html
 output:
   html_document:
     theme: cosmo

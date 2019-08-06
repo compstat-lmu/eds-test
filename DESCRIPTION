@@ -1,5 +1,9 @@
 Package: basis-course-test
+URL: https://github.com/compstat-lmu/eds-test
 Imports:
     here,
     dplyr,
     xaringan
+Remotes: 
+  - dirkschumacher/encryptedRmd
+

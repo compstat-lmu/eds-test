@@ -15,6 +15,8 @@ get_stage("deploy") %>%
   add_step(step_run_code(source("basis-course.R"))) %>%
   add_step(step_run_code(source("courses/basis/2019_03/render-course.R"))) %>%
   add_step(step_run_code(rmarkdown::render_site("courses/basis/2019_03"))) %>%
+  add_step(step_run_code(encrypt_html_file("courses/basis/eds-test/basis_descriptive.html",
+                                           output_path = "courses/basis/eds-test/basis_descriptive_enc.html")))
 
   add_step(step_run_code(file.copy(dir("courses/basis/eds-test/", full.names = TRUE), "docs/", recursive = TRUE))) %>%
   #add_step(step_run_code(file.copy("courses/basis/2019_03/basis_descriptive.html", "docs", overwrite = T))) %>%

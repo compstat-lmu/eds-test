@@ -25,4 +25,5 @@ get_stage("deploy") %>%
 
   # finally push everything
   add_step(step_run_code(file.copy(dir("courses/basis/eds-test/", full.names = TRUE), "docs/", recursive = TRUE))) %>%
-  add_step(step_do_push_deploy(path = "docs"))
+  add_step(step_do_push_deploy(path = "docs")) %>%
+  add_step(step_run_code(system("git checkout master")))

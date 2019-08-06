@@ -5,5 +5,4 @@ Imports:
     dplyr,
     xaringan
 Remotes: 
-  - dirkschumacher/encryptedRmd
-
+  dirkschumacher/encryptedRmd
